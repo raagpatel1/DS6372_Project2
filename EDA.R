@@ -53,3 +53,24 @@ RawData %>% ggplot(aes(x = bonemed, y = fracture)) + geom_boxplot()
 RawData %>% ggplot(aes(x = bonemed_fu, y = fracture)) + geom_boxplot()
 RawData %>% ggplot(aes(x = bonetreat, y = fracture)) + geom_boxplot()
 RawData %>% ggplot(aes(x = fracture, y = fracscore)) + geom_boxplot()
+RawData %>% ggplot(aes(x = fracture, y = age)) + geom_boxplot()
+
+library('rsample')
+
+# RawData$fracture <- ifelse(RawData$fracture == "Yes", 1, 0)
+
+set.seed(1234)
+
+train_test_split <- initial_split(RawData, prop = 4/5) 
+
+TRAIN <- training(train_test_split)
+TEST <- testing(train_test_split)
+
+library(glmnet)
+
+model2<-glm(fracture  ~ . -sub_id,data=TRAIN,family = "binomial")
+summary(model2)
+
+
+
+
