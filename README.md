@@ -18,3 +18,7 @@ Google Slides Link:
 https://docs.google.com/presentation/d/1hqEZ7eroHRJnaPaZB6c4TKRERwg9GRtWIjhPFGnKUR4/edit?usp=sharing
 
 Currently (11/16), the slides are all themed uniquely, and named corresponding to the slide theme. Feel free to play around with what slide theme you want to use.
+
+YouTube Link: 
+
+https://www.youtube.com/watch?v=JRVmg47Hzxw
