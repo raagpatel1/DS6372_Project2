@@ -1503,7 +1503,7 @@ model.sum.df = data.frame(Model_name, AUC_score, AIC, Test_Accuracy, Test_Sensit
 model.sum.df$AIC = format(round(as.numeric(model.sum.df$AIC), 4), nsmall = 4)
 ordered.model.sum.df = model.sum.df[order(-AUC_score),]
 rownames(ordered.model.sum.df) = 1:nrow(ordered.model.sum.df)
-knitr::kable(ordered.model.sum.dfS)
+knitr::kable(ordered.model.sum.df)
 ```
 
 #####################################################################################
